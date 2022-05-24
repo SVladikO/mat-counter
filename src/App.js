@@ -71,6 +71,8 @@ function App() {
                     />
                 )}
             </div>
+            <div className="about"> Help people to stop using swear words </div>
+            <div className="author"> svladiko: <a href="https://github.com/SVladikO?tab=repositories">github</a>  </div>
         </div>
     );
 }
