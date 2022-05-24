@@ -33,6 +33,14 @@ function App() {
         setCount(0);
     }
 
+    const stopAudio = audio => {
+        // if (!audio.paused) return; //if audio don't play we won't stop it.
+
+        audio.pause();
+        const oldSrc = audio.src;
+        audio.src='';
+        audio.src=oldSrc;
+    }
 
     return (
         <div className="App">
@@ -46,9 +54,7 @@ function App() {
                     onClick={
                     () => {
                         setCount(count + 1)
-                        animal.sound.pause();
-                        animal.sound.autoplay = true; // for Iphone only
-                        animal.sound.currentTime = 0;
+                        stopAudio(animal.sound)
                         animal.sound.play();
                     }}
                     alt={animal.alt }
