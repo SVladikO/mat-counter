@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import './App.css';
 
+import github from "./images/github.svg";
 import chickenImg from "./images/chicken.png";
 import dogImg from "./images/dog.png";
 import pigImg from "./images/pig.png";
@@ -44,10 +45,10 @@ function App() {
 
     return (
         <div className="App">
+
             <p className="counter">{count}</p>
 
             <div className="menu">
-                <img src={resetImg} onClick={reset} className='reset_button' alt='reset'/>
                 <img
                     src={animal.img}
                     className='counter_button'
@@ -60,6 +61,8 @@ function App() {
                     alt={animal.alt }
                 />
             </div>
+            <img src={resetImg} onClick={reset} className='reset_button' alt='reset'/>
+
             <div className='animal_list'>
                 {animals.map(a =>
                     <img
@@ -72,7 +75,12 @@ function App() {
                 )}
             </div>
             <div className="about"> Help people to stop using swear words </div>
-            <div className="author"> svladiko: <a href="https://github.com/SVladikO?tab=repositories">github</a>  </div>
+
+            <div className="footer">
+                <a className='git_link' href="https://github.com/SVladikO?tab=repositories" target="_blank">
+                    <img src={github} className='github_icon' alt='github'/>
+                </a>
+            </div>
         </div>
     );
 }
