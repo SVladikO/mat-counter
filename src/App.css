@@ -28,6 +28,37 @@
   color: #61dafb;
 }
 
+.counter {
+  font-size: 44px;
+}
+.menu {
+  position: relative;
+}
+.reset_button {
+  position: absolute;
+  bottom: 0;
+  left: 52px;
+  height: 60px;
+  width: 60px;
+}
+.counter_button {
+  height: 160px;
+  width: 160px;
+  margin: 40px 0 0 0;
+  border: solid 1px black;
+  border-radius: 50%;
+}
+
+.animal_list {
+  margin: 100px auto 0;
+}
+
+.animal_item {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
