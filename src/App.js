@@ -34,15 +34,6 @@ function App() {
         setCount(0);
     }
 
-    const stopAudio = audio => {
-        // if (!audio.paused) return; //if audio don't play we won't stop it.
-
-        audio.pause();
-        const oldSrc = audio.src;
-        audio.src='';
-        audio.src=oldSrc;
-    }
-
     return (
         <div className="App">
 
@@ -54,8 +45,7 @@ function App() {
                     className='counter_button'
                     onClick={
                     () => {
-                        setCount(count + 1)
-                        stopAudio(animal.sound)
+                        setCount(prev => prev + 1)
                         animal.sound.play();
                     }}
                     alt={animal.alt }
@@ -77,7 +67,7 @@ function App() {
             <div className="about"> Help people to stop using swear words </div>
 
             <div className="footer">
-                <a className='git_link' href="https://github.com/SVladikO?tab=repositories" target="_blank">
+                <a className='git_link' href="https://github.com/SVladikO?tab=repositories" target="_blank" rel="noreferrer">
                     <img src={github} className='github_icon' alt='github'/>
                 </a>
             </div>
